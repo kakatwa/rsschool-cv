@@ -199,7 +199,6 @@ code {
 
 
 /* ==================== FOOTER ==================== */
-
 .site-footer {
     margin-top: 30px;
     padding: 25px 0;
@@ -209,20 +208,28 @@ code {
 
 .footer-content {
     display: flex;
-    justify-content: center;
-    gap: 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-content > a:first-child {
+    font-size: 1.1rem;
+}
+
+.footer-content > span {
+    font-size: 1.1rem;
 }
 
 .rs-link {
-    display: inline-flex;
+    display: flex;
     align-items: center;
 }
 
 .rs-link img {
-    width: 50px;
+    display: block;
+    width: 75px;
     height: auto;
 }
-
 /* ==================== BASIC RESPONSIVENESS ==================== */
 
 @media (max-width: 750px) {
@@ -243,5 +250,10 @@ code {
     .site-nav ul {
         justify-content: flex-start;
         overflow-x: auto;
+    }
+
+     .footer-content {
+        gap: 15px;
+        justify-content: center;
     }
 }
