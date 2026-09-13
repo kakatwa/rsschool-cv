@@ -215,12 +215,9 @@
                 <h3>BSc in Computer Science</h3>
 
                 <p>
-                    Computer Science faculty
+                    CS'28
                 </p>
 
-                <p class="muted">
-                    2024–2028
-                </p>
             </article>
 
             <article>
@@ -238,15 +235,32 @@
             <h2>Code Example</h2>
 
             <p>
-                Codewars solution example — to be replaced with an actual
-                solution later.
+                Codewars solution for the "Reverse words" kata in C++.
             </p>
 
-            <pre><code>function reverseWords(str) {
-    return str
-        .split(" ")
-        .reverse()
-        .join(" ");
+            <pre><code>#include <string>
+std::string reverse_words(std::string str)
+{
+    std::string res = "";
+    std::string word = "";
+    for (int i = 0; i < str.size(); i++) {
+        if (str[i] == ' ') {
+            // Reverse the current word
+            for (int j = word.size() - 1; j >= 0; j--) {
+                res += word[j];
+            }
+            res += ' ';
+            word = "";
+        }
+        else {
+            word += str[i];
+        }
+    }
+    for (int j = word.size() - 1; j >= 0; j--) {
+        res += word[j];
+    }
+    return res;
+}
 }</code></pre>
         </section>
 
@@ -255,29 +269,40 @@
 
     <!-- ==================== FOOTER ==================== -->
     <footer class="site-footer">
-        <div class="container footer-content">
+    <div class="container footer-content">
 
-            <a
-                href="https://github.com/kakatwa"
-                target="_blank"
-                rel="noopener noreferrer"
+        <a
+            href="https://github.com/kakatwa"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            GitHub
+        </a>
+
+        <span>© 2026</span>
+
+        <a
+            href="https://rs.school/courses/short-track"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            RS School
+        </a>
+
+        <a
+            href="https://rs.school/courses/short-track"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rs-link"
+        >
+            <img
+                src="https://rs.school/_next/static/media/rss-logo.c19ce1b4.svg"
+                alt="RS School logo"
             >
-                GitHub
-            </a>
+        </a>
 
-            <span>© 2026</span>
-
-            <!-- RS School logo/link will be finalized later -->
-            <a
-                href="https://rs.school/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                RS School
-            </a>
-
-        </div>
-    </footer>
+    </div>
+</footer>
 
 </body>
 </html>

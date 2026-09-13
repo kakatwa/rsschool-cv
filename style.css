@@ -213,6 +213,15 @@ code {
     gap: 25px;
 }
 
+.rs-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.rs-link img {
+    width: 50px;
+    height: auto;
+}
 
 /* ==================== BASIC RESPONSIVENESS ==================== */
 
